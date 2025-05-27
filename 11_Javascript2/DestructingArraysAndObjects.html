@@ -1,0 +1,27 @@
+<body>
+    <script>
+        // Destructuring basically shorthands the creation of vars from the contents of a table/object.
+        // instead of using like month[0] for january, you can call item 0 as jan
+        // Or also calling the first key as name. Makes recalling data easier than thinking of the index value.
+        // Don't forget that the naming of the var-ing is in the same order as the contents.
+        
+        const months =['January', 'February', 'December'];
+        // Destructuring arrays
+        const [jan, feb] = months;
+
+        console.log(jan, feb);
+        console.log(months);
+        console.log(months[0])
+
+        
+        const person3 = {
+            "name" : "Marie",
+            "insta" : "Does not have insta",
+            "something" : "A thing"
+        }
+        
+        // Destructuring objects    
+        const {name, insta} = person3;
+
+    </script>
+</body>

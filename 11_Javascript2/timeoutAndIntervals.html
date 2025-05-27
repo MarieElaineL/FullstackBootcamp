@@ -1,0 +1,23 @@
+<body>
+    <script>
+        // Works but not cool because it happens just once
+        console.log("Starting script...")
+        setTimeout(function(){
+            console.log("3 second has passed.")
+        }, 3000) // 3 sec
+
+        // Let something repeat every x time, and then have it stop
+        // Lets not make computers explode with counting forever
+        let count = 0;
+        const myInterval =  setInterval(function(){
+            console.log("+2 seconds has passed")
+            count ++;
+            if(count === 3){
+                clearInterval(myInterval);
+                console.log("Time's up!");
+            }
+        }, 2000);
+
+        // This is normally used when the website needs refreshing, like a chatroom, to pull from server at a constant pace
+    </script>
+</body>

@@ -1,0 +1,20 @@
+Basically, Const and Int are confined to their function / if or whaterver that includes them within curly brackets.
+But var can be accessed from the outside
+
+Comparison:
+A function is a dog kennel, won't let Const and Let out. But Var can leave.
+
+Do if you create a Const within a fn(), you cannot access the const from outside the fn()
+But you can access the created var from outside the fn()
+
+example:
+<script>
+    const num = 123;
+    if (num == 123){
+        const greetings = "Hello 123";
+    }
+    console.log(greetings);
+</script>
+In this script, console log can get const num, but not const greetings
+
+But if it's var greetings instead, you can console log "Hello 123"
