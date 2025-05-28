@@ -1,0 +1,36 @@
+<body>
+
+    <script>
+        class MyClassName {
+            setName(name){
+                this.name = name;
+            }
+            speak(){
+                if(this.name === undefined){
+                    this.name = "this random ah dog"
+                }
+                console.log(`woof woof, yapped ${this.name}`)
+            }
+        }
+        const thing = new MyClassName();
+        thing.setName("Beans the good boi");
+        thing.speak();
+
+        class MyReaction{
+            setReaction(react){
+                this.react = react;
+            }
+            speak(){
+                if(this.react === undefined){
+                    this.react = "Ohh look at the widdle puppi 🥹";
+                }
+                console.log(`OMIGOSH! Look! It's ${this.react}`)
+            }
+        }
+
+        const me = new MyReaction();
+        me.setReaction(`the the good boi!! ${thing.name}!!!`)
+        me.speak();
+
+    </script>
+</body>

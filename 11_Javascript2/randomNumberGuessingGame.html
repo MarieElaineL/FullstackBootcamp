@@ -1,0 +1,26 @@
+<body>
+    
+    <script>
+        "strict mode" // making sure its fool-proof (*im the fool*)
+        
+        // Generates a random number from 1 to 10
+        // const randNum = Math.floor(Math.random() * 10 + 1);
+        const randNum = Math.ceil(Math.random() * 10); //this is an optimized version of my take ^
+
+        // Confirms what is the number to be guessed for testing purposes 
+        console.log(randNum);
+        
+        while(true){
+            let num = prompt("Guess a number from 1 to 10.");
+            num = Number(num); //Makes sure that the number entered is considered a number without fail.
+
+            if (num === randNum){
+                console.log(`Correct! ${num} is the number you are looking for!`)
+                break;
+            }else{
+                console.log(`Wrong! ${num} is not the number you are looking for.`);
+            }
+        }
+
+    </script>
+</body>

@@ -1,0 +1,26 @@
+<body>
+    
+    <script>
+        // const person = {
+        //     'name' : 'Marie',
+        //     speak(name){
+        //         console.log(`hi, my name is ${this.name}`);
+        //     }
+        // }
+        // person.speak("bim");
+
+        function counter(){
+            if(this.total === undefined){
+                this.total = 1
+            }else{
+                this,total++
+            }
+            console.log("Running counter. Total is ", this.total);
+        }
+
+        counter()
+        counter()
+        counter()
+        counter()
+        </script>
+</body>

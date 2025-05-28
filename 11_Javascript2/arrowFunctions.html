@@ -1,0 +1,58 @@
+<body>
+    <script>
+        const hello = function (){
+            return "hello Marie"
+        }
+        const greeting = hello();
+        console.log(greeting)
+
+        // All of this ^ can be compacted with the Arrow function v 
+
+        const hewwo = () =>{
+            console.log("Hewwoo");
+        }
+        hewwo()
+
+        // EVEN SHORTER... !!
+        const heyo = () => "Heyo from one line function";
+
+
+        // An other example:
+
+        const myNewGreeting = (name) =>{
+            console.log(`Welcome, ${name}`);
+        }
+        myNewGreeting("Marie");
+
+        // Shortened even more as...
+
+        const myShortestGreeting = (name, secondParameter) => console.log(`Welcome ${name} of the ${secondParameter}`);
+        myShortestGreeting("Marie", "funk")
+
+        // BREF, HERE ARE 3 WAYS TO MAKE A FUNCTION 
+        
+   
+        function myName(name){
+            console.log(`Hi, my name is ${name}`)
+        }
+
+        const anonymousFunction = function(name){
+            console.log(`Anonymous function declares secretly that my name is ${name}`)
+            this //localized 
+        }
+
+        // This is more modern, and more effective
+        const arrowFunc1 = (name) =>{
+            console.log(`Arrow function 1 confirms that my name is ${name}`);
+            this // globalized
+        }
+
+        const arrowFunc2 = (name) => console.log("Arrow function 2 says my name is ${name}")
+
+        myName("Marie");
+        anonymousFunction("Merry");
+        arrowFunc1("Marie of the func");
+        arrowFunc2("The magical marie of wonders");
+
+    </script>
+</body>

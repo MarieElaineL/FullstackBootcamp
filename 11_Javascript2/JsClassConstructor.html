@@ -1,0 +1,70 @@
+<body>
+    <script>
+        class Personx {
+            setName(name){
+                this.name = name
+            }
+        } 
+        const p = new Personx();
+        p.setName("Marie")
+        // Basic, but you can do better!!
+
+        // CONSTRUCTOR METHOD !!!!
+        class Person{
+            constructor(name){
+                this.name = name
+            }
+            greeting(){
+                console.log(`Hello from ${this.name}`)
+            }
+
+            setName(name) {
+                this.name = name;
+            }
+        }
+
+        const marie = new Person("Marie");
+        marie.greeting();
+        marie.setName("Mri");
+        marie.greeting();
+
+        // Exercise
+        class CharacterBuilder{
+            constructor(name, age, sign, hairCol, job){
+                this.name = name;
+                this.age = age;
+                this.sign = sign;
+                this.hairCol = hairCol;
+                this.job = job;
+            }
+            charaDescript(){
+                console.log(`Hi, my name is ${this.name}, I am ${this.age} years old. I am a ${this.sign}, I have ${this.hairCol} hair and my job is ${this.job}. Nice to meet you.`);
+            }
+            setName(name){
+                this.name = name;
+            }
+            setAge(age){
+                this.age = age;
+            }
+            setSign(sign){
+                this.sign = sign;
+            }
+            setHairCol(hairCol){
+                this.hairCol = hairCol;
+            }
+            setJob(job){
+                this.job = job;
+            }
+
+        }
+
+        const hitsu = new CharacterBuilder("Hitsu");
+        hitsu.setName("Hitsuji");
+        hitsu.setAge("21");
+        hitsu.setSign("Libra");
+        hitsu.setHairCol("Blonde");
+        hitsu.setJob("being a butler to the princess");
+        hitsu.charaDescript();
+
+    </script>
+</body>

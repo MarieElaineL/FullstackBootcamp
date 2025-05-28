@@ -1,0 +1,39 @@
+<body>
+    <!-- How to gracefully use Try Catch Finally -->
+     <!-- Best to not make errors while working, and make fixing stuff easier -->
+    <script>
+
+        // This allows to work on a bug while allowing the rest to work
+        // because if one thing is broken, everythng else after the issue crashes 
+        
+        // try{
+        //     throw "Marie's custom error";
+        //     console.log("A thing in there")
+        // }catch(error){
+        //     console.warn("Error logging:", error);
+        // }finally{
+        //     // Rare but exists
+        // }
+
+        // const num = 10;        
+        // try {
+        //     num = num + 20;
+        // } catch(error){
+        //     console.warn("ERROR LOGGING:", error);
+        //     num = num + 15;
+        // }finally{
+        //     console.log("The final number is", num)
+        // }
+
+        const pkmn = "bim";
+        try{
+            pkmn = toUpperCase(pkmn);
+        }catch(error){
+            console.warn("Wait, you dumdum", error);
+        }finally{
+            console.log(`Finally: ${pkmn} the Mareep`)
+        }
+
+        console.log("Now despite this error existing, the rest of the code (this console log) can continue to exist");
+    </script>
+</body>
