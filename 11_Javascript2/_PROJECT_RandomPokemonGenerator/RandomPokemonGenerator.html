@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random pokemon stats</title>
+        <link rel="shortcut icon" href="../_PROJECT_RandomPokemonGenerator/img/favIcon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <p>This page is solely for training. Api used: <a href="https://pokeapi.co/" aria-label="Poke API dot com">https://pokeapi.co/</a></p>
+        </div>
+
+        <div id="main">
+            <div id="area1" class="section">
+                <h1>Who's that pokémon?</h1>
+                <img id="img" src="" alt="Pokemon sprite">
+                <div class="field">
+                    <p class="label">Name:</p>
+                    <p id="name" class="result">...loading</p>
+                </div>
+                <div class="field">
+                    <p class="label">Dex number:</p>
+                    <p id="number" class="result">...loading</p>
+                </div>
+            </div>
+            <div id="area2" class="section">
+                <div class="field">
+                    <p class="label">Type</p>
+                    <p id="type" class="result">...loading</p>
+                </div>
+                <div class="field">
+                    <p class="label">Height:</p>
+                    <p id="height" class="result">...loading</p>
+                </div>
+                <div class="field">
+                    <p class="label">Weight:</p>
+                    <p id="weight" class="result">...loading</p>
+                </div>
+            </div>
+
+            <div id="area3" class="section">
+                <div id="btn">Randomize an other Pokemon</div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Marie-Elaine Lopes, 2025 <br>Project for UDEMY course: The Ultimate2025 Fullstack Web Development Bootcamp</p>
+        </div>
+
+        <script>
+            {    
+                "use strict"    
+                // Randomly generated on load
+                const img = document.getElementById("img");
+                const name = document.getElementById("name");
+                const number = document.getElementById("number");
+                const type = document.getElementById("type");
+                const height = document.getElementById("height");
+                const weight = document.getElementById("weight");
+                const btn = document.querySelector("#btn");
+                let randomNumber = Math.ceil(Math.random()*1025);
+                
+                console.log(`Random number from 1 to 1025: ${randomNumber}`);
+                
+                // DATABASE imported
+                fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
+                    .then(response => response.json())
+                    .then(pokemon => {
+                        console.log(`Pokemon name: ${pokemon['name']}`);
+                        console.log(pokemon);
+
+                        name.innerHTML = pokemon['name'];
+                        number.innerHTML = pokemon['id'];
+                        type.innerHTML = pokemon['types'].map(type => type.type.name);
+                        height.innerHTML = pokemon['height']/10 + " m";
+                        weight.innerHTML = pokemon['weight']/10 + " kg";
+                        img.src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon['id']}.png`;
+
+                })
+                                
+                
+                // btn.onclick
+                btn.addEventListener('click', (e) =>{
+                    e.preventDefault;
+
+                    name.innerHTML = "...loading";
+                    number.innerHTML = "...loading";
+                    type.innerHTML = "...loading";
+                    height.innerHTML = "...loading";
+                    weight.innerHTML = "...loading";
+                    
+                    // Currently 1025 pokemon existing
+                    const randomNumber = Math.ceil(Math.random()*1025);
+                    // console.log(`Random number from 1 to 1025: ${randomNumber}`);
+
+                    // DATABASE imported
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
+                        .then(response => response.json())
+                        .then(pokemon => {
+                            console.log(`Pokemon name: ${pokemon['name']}`);
+                            console.log(pokemon);
+
+                            name.innerHTML = pokemon['name'];
+                            number.innerHTML = pokemon['id'];
+                            type.innerHTML = pokemon['types'].map(type => type.type.name);
+                            height.innerHTML = pokemon['height']/10 + " m";
+                            weight.innerHTML = pokemon['weight']/10 + " kg";
+                            img.src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon['id']}.png`;
+  
+                    })
+                }) 
+
+
+
+                // console.log(name, number, type1, type2, height, weight);
+                // console.log(`Random pokemon name: ${pokemon.name}`)
+
+
+                
+            }
+</script>
+    </body>
+</html>

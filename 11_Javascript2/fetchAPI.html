@@ -1,7 +1,7 @@
 <body>
     <script>
         fetch('https://pokeapi.co/api/v2/pokemon/mareep')
-            .then(response => response.json())
+            .then(response => response.json()) // Transforms the requested data into JSON
             .then(data => {
                 console.log(data)
             })

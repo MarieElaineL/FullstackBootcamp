@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+    background-color: beige;
+}
+
+
+#header{
+    background-color: white;
+    border: 2px solid rgb(255, 174, 0);
+    padding: 1em .5em;
+    text-align: center;
+}
+
+h1{
+    font-family: "Bangers", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: rgb(255, 174, 0);
+    text-shadow: 
+        -2px -2px 0 blue, 
+        2px -2px 0 blue, 
+        -2px 2px 0 blue, 
+        2px 2px 0 blue;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#main{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 25px;
+    border: 4px dashed rgb(255, 174, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+img{
+    /* border: 1px solid green; */
+    width: 200px;
+    margin: 0 auto;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.field{
+    display: flex;
+}
+
+.label{
+    font-family: "Bangers", sans-serif;
+    color: royalblue; 
+    padding-right: 1em;
+}
+
+.result{
+    font-weight: 800;
+}
+
+#name, #type{
+    text-transform: capitalize;
+}
+
+#area3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    display: block;
+    background-color:rgb(255, 174, 0);
+    color: white;
+    padding: 1em;
+    border-radius: 50px;
+    border: 3px solid blue;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+#btn:hover{
+    cursor: pointer;
+    border: 3px solid rgb(9, 9, 184);
+    background-color: rgb(211, 145, 3);
+}
+#footer{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em .5em;
+}
