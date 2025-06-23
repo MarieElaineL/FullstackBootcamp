@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="parent"> 
+        <strong>Bolded word here</strong>
+        <i>Italicized word here</i>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro praesentium assumenda recusandae! Dolores fugiat natus eum vel? Expedita reiciendis fuga facere culpa voluptas blanditiis fugiat quas, deleniti error natus ipsa!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+         //   $("#parent").empty() // Hides the content
+           //     .html("<h1>HAHA BOOM SHAKA LAKA</h1>")// Op! This adds new content after the original has been hidden!
+
+           const $parent = $("#parent")// is a better way to Javascriptify this
+            $parent.html("Stuff in here and there's no more child elements muahaha")
+            // .empty() is good to empty residual information, like from an API. It helps to lighten the processing
+
+        })
+    </script>
+</body>
+</html>

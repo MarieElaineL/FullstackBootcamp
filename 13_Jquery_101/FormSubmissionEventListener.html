@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" name="name" placeholder="Your name">
+        <button type="submit">Submit this form</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("form").on("submit", function(event){
+                // event.preventDefault() // currently set to avoir the entered info to be added to the URL
+                //Will allow to place the entered info in an other place.
+                // console.log("Form was not submitted")
+                
+            // })
+            $("button").on("click", function(e){
+                event.preventDefault();
+                console.log("Button is currently useless")
+            })
+        })
+    </script>
+</body>
+</html>

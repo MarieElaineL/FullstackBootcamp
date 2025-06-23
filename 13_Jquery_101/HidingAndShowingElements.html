@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin-left: 100px;
+            margin-top: 25px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="hide">Hide this black square!</button>
+    <button id="show">Bring it back!</button>
+    <div id="box">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").on("click", function(e){
+                e.preventDefault();
+                $("#box").hide()
+            })
+            $("#show").on("click", function(e){
+                e.preventDefault();
+                $("#box").show()
+            })
+        })
+    </script>
+</body>
+</html>

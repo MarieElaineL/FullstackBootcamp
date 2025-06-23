@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <textarea name="mytextarea" cols="30" rows="10"></textarea> <br>
+    <input name="myinput">
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // This is good to make a keyboard appear on mobile when you want someone to enter text for example
+            $("[name='mytextarea']").on("focus", function(){
+                console.log("You focused onto this text area")
+            })
+            $("[name='myinput']").on("focus", function(){
+                console.log("You focused onto this input")
+            })
+        })
+    </script>
+</body>
+</html>

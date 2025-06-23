@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" value="">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //             Not UNFOCUS, but Blur *sigh, why*
+            $("input").on("blur", function(){
+                console.log("You blurred away from this input")
+                // This is good to get the value of the entered info after they exit
+                let webisteUrl = $(this).val()
+                if(webisteUrl.substr(0,4) !== "http"){ // Meaning if the entered text does not start with http...
+                    webisteUrl = `http://${webisteUrl}`
+                }
+                $(this).val( webisteUrl)
+            })
+
+        })
+    </script>
+</body>
+</html>

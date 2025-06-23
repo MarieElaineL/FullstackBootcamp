@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+        }
+
+        .blue{
+            background-color: rgb(30, 187, 235);
+        }
+
+        .pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="becomeBlue">Turn the box blue!</button>
+    <button id="becomeBlack">Turn it back to black!</button>
+    <div id="box" class="box"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#becomeBlue").on("click", function(e){
+                e.preventDefault();
+                $(".box").addClass("blue");
+            })
+
+            $("#becomeBlack").on("click", function(e){
+                e.preventDefault();
+                $(".box").removeClass("blue");
+            })
+
+            //  auto pink
+            // setTimeout(() => {
+            //     $(".box").addClass("pink");
+            //     console.log("After 2 seconds, the box is now pink!")
+            // }, 2000);
+        });
+    </script>
+</body>
+</html>

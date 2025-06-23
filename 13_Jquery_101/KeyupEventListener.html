@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="select" class="select-me" value="Hewwo">
+    <input type="text" name="select" class="select-me" value="Second input with same selected class">
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".select-me").on("keyup", function(){
+                // const $input = $(".select-me");  // Not optimized, use the This instead
+                console.log($(this).val()); //using this allows that only the active input is being watched
+            })
+        })
+    </script>
+</body>
+</html>

@@ -8,13 +8,33 @@
 <body>
     
 
+    <h1>Some text in here 
+    </h1>
+    <h2>Second text</h2>
+    <p>Ultimately, this is the best way to write down the pends in script.</p>
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script>
+
+// Unlike .after or .before, the appended/prepended is added inside the selected element.
+// Like adding text in styles
 
         
         $(document).ready(function(){
             console.log("jQuery is loaded!");
+            // JQUERY here
+            $("h1").append("<strong>Appended text in bold</strong>"); // Append adds at th end, prepend adds at the beginning
+            $("h1").prepend("<i>Prepended text in italic </i>"); 
+
+            $("h2").append("<u> Added text at the end</u>").prepend("<span style='color: red;'>Prepended text </span>");
+            
+            $("p")
+            .prepend("You can format the .append and .prepend on the next line in the code! ")
+            .append(" Because now you can make it easier to read in the script!")
+            .append(" Bonus 2nd append")
+            .text("New text, you'll never know the original!") //This changes the text in the order In this case, this text overwrites everything. First in edit changes the html text while keeping the pends.
         })
+
     </script>
 </body>
 </html>
