@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>    
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <button>Click to slide</button>
+    <div class="box"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".box").slideToggle()
+                // Slide is more like a stretchy expand animation. Like for drop-down menus.
+            });
+        })
+    </script>
+</body>
+</html>

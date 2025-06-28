@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $.post(url, data, function(data){
+            // })
+
+            $.post(
+                'https://httpbin.org/post', 
+                {favPokemon: 'Mareep'}, 
+                function(data){
+                    console.log("Mareep has been sucessfully posted to httpbin.org/post")
+                }
+            )
+        })
+    </script>
+</body>
+</html>

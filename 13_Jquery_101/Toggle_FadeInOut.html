@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <button id="in">Fade In</button>
+    <button id="out">Fade Out</button>
+    <button id="inout">Fade In and Out</button>
+    <button id="toggle">Toggle the box</button>
+    <div class="box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // Toggles are good use for Menus and other elements that you want to show or hide
+            const $box = $(".box");
+            const $inButton = $("#in");
+            const $outButton = $("#out");
+            const $inOutButton = $("#inout");
+            const $toggleButton = $("#toggle");
+
+            $inButton.on("click", function(e) {
+                e.preventDefault();
+                $box.fadeIn(450); // Fades in over 1 second
+            });
+
+            $outButton.on("click", function(e) {
+                e.preventDefault();
+                $box.fadeOut(1000); // Fades out over 1 second
+            });
+
+            $inOutButton.on("click", function(e) {
+                e.preventDefault();
+                $box.fadeToggle(500); // Toggles fade in and out over 0.5 seconds
+            });
+
+            $("#toggle").on("click", function(){
+                $box.toggle(); //Toggles the "display" property of the box since we selected the box with its class. Technically, we're toggle the entire contents of the CSS class "box"
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>    
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <button>Click me</button>
+    <div class="box"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Callback functions are functions that are executed after another function has completed.
+            // Function-ception
+            $("button").on("click", function(){
+                $(".box").fadeOut(1500, function(){
+                    console.log("Callback completed");
+                    $(this).remove(); // removes the box once it becomes fully transparent.
+                })
+                // Basically,
+            })
+        })
+    </script>
+</body>
+</html>

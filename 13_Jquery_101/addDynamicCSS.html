@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+        }
+        
+        .blue{
+            background-color: rgb(30, 187, 235);
+        }
+        
+        .yellow{
+            background-color: rgb(253, 216, 7);
+        }
+        .borderRad{
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleBlue">Black or blue?</button>
+    <button id="toggleBorder">Toggle Border Radius</button><br>
+    <input type="text" name="text" id="text" placeholder="Guess the magic word!">
+    <div id="box" class="box"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#box").css("border", "1px solid red");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>    
+    <style>
+        .box{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: 75px;
+            margin-top: 25px;
+            background-color: #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $box = $(".box");
+            // Getting to define current dimensions of things
+            console.log($box.width()); // Get the width of the box
+            console.log($box.height()); // Get the height of the box    
+            console.log($box.innerWidth()); // Get the inner width of the box (includes padding)
+            console.log($box.innerHeight()); // Get the inner height of the box (includes padding   
+            console.log($box.outerWidth()); // Get the outer width of the box (includes padding and border)
+            console.log($box.outerHeight()); // Get the outer height of the box (includes padding
+            console.log($box.outerWidth(true)); // Get the outer width of the box (includes padding, border, and margin)
+            // With "true" here, the total is 215 (100p for width, 20px of padding on each side, and 75px of margin on the left side)
+
+            // GOOD FOR RESPONSIVE DESIGN
+            // It's usually better to use media queries in CSS for responsive design, but you can also use jQuery to change styles based on the screen size.
+            $(window).on("resize", function(){
+                console.log( $(window).width(), 'x', $(window).height()) //Gets the width and height of the screen upon any resize event.
+                if($(window).width() < 800) {
+                    $box.css({
+                        "background-color": "red"
+                    });
+                } else {
+                    $box.css({
+                        "background-color": "#000"
+                    });
+                }
+            })
+        })
+    </script>
+</body>
+</html>

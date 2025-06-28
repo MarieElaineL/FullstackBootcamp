@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>
+</head>
+<body>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+    
+    <div>Option A</div>
+    <div>Option B</div>
+    <div>OPtion C</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("li").text("new text"); // Changes text on all LI
+            $("li").each(function(index, element){
+                $(element).text(`${index+1}. New item here`)
+
+                if(index === 2){ //selecting the third item
+                    $(element)
+                    .css("background-color", "black") // Change background color of the third item
+                    .css("color", "white") // Change text color of the third item
+                }
+            })
+
+            $("div").each(function(index, element){
+                const originalText = $(element).text()
+                $(element).text(`${index +1}. ${originalText}`);
+                if(index ===1){
+                    $(element)
+                    .css("background-color", "pink") // Change background color of the second div
+                }
+            })
+        })
+    </script>
+</body>
+</html>
