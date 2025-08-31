@@ -18,3 +18,24 @@
     background-position: center;
     opacity: 40%;
 }
+
+.card-poster{
+    display: block;
+    background-color: #212529;
+    width: auto;
+    height: 430px;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.movie-poster{
+    display: block;
+    background-color: #212529;
+    width: auto;
+    height: 666px;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+
+}

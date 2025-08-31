@@ -1,11 +1,24 @@
 import { useHistory, Link } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = ({searchText, setSearchText}) => {
+  const history = useHistory();
+  const [ inputValue, setInputValue] = useState("");
 
-  const history = useHistory()
-  const updateSearchText = (e) => {
+  // const updateSearchText = (e) => {
+  //   history.push('/search');
+  //   setSearchText(e.target.value);
+  // }
+
+  // Handle input changes as a local state only
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    setSearchText(inputValue);
     history.push('/search');
-    setSearchText(e.target.value);
   }
 
   return (
@@ -43,19 +56,23 @@ const Navbar = ({searchText, setSearchText}) => {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+
+
+          <form className="d-flex" role="search" onSubmit={handleSubmit}>
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
-              value={searchText}
-              onChange={updateSearchText}
+              value={inputValue}
+              onChange={handleInputChange}
             />
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
+
+
         </div>
       </div>
     </nav>

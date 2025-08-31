@@ -6,6 +6,8 @@ import AboutView from "./components/AboutView";
 import SearchView from "./components/SearchView";
 import { Switch, Route } from "react-router-dom";
 import MovieView from "./components/MovieView";
+import { Redirect } from "react-router-dom";
+import FouroFourView from "./components/FouroFourView";
 
 function App() {
 
@@ -40,6 +42,12 @@ function App() {
           <SearchView keyword={searchText} searchResults={searchResults} />
         </Route>
         <Route path="/movies/:id" component={MovieView} />
+        <Route path="/404">
+          <FouroFourView />
+        </Route>
+        <Route>
+          <Redirect to="/404" />
+        </Route>
       </Switch>
     </div>
   );

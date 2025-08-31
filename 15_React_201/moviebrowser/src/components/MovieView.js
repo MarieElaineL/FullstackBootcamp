@@ -34,7 +34,7 @@ const MovieView = () => {
                     <Hero text={movieDetails.title} backdrop={backdropURL}/>
                     <div className="row my-5 mx-3" >
                         <div className="col-md-3">
-                            <img src={posterPath} alt="..." className="img-fluid shadow rounded" />
+                            <img src={posterPath} alt={movieDetails.title} className="img-fluid shadow rounded movie-poster" />
                         </div>
                         <div className="col-md-9">
                             <h2>{movieDetails.title}</h2>

@@ -5,44 +5,46 @@ import { Link } from "react-router-dom";
 
 const SearchView = ({keyword, searchResults}) => {
 
-const MovieCard = ({ movie}) => {
-  const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  const detailUrl = `/movies/${movie.id}`;
-  return (
-    <div className="col-lg-3 col-md-6 col-7 my-4">
-      <div className="card" style={{width: '18em'}}>
-        <img src={posterUrl} className="card-img-top" alt="{movie.title}" />
-        <div className="card-body">
-          <h5 className="card-title">{movie.title}</h5>
-          {/* <p className="card-text">{movie.overview}</p> */}
-          <Link to={detailUrl} className="btn btn-primary">Show details</Link>
+  const MovieCard = ({ movie}) => {
+    const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    const detailUrl = `/movies/${movie.id}`;
+
+    return (
+      <div className="col-lg-3 col-md-6 col-7 my-4">
+        <div className="card" style={{width: '18em'}}>
+          <img src={posterUrl} className="card-img-top card-poster" alt={movie.title} />
+          <div className="card-body">
+            <h5 className="card-title">{movie.title}</h5>
+            {/* <p className="card-text">{movie.overview}</p> */}
+            <Link to={detailUrl} className="btn btn-primary">Show details</Link>
+          </div>
         </div>
       </div>
-    </div>
 
-  )
-}
+    )
+  }
 
-let title="";
+  // Updating Hero text for search word
+  let title="";
   if(searchResults.length > 0){
-     title =`You are searching for ${keyword}`;    
+    title =`You are searching for ${keyword}`;    
   }else{
     title = `No results for ${keyword}`;
   }
 
-  const resultsHtml = searchResults.map((obj, i) =>{
-    return <MovieCard movie={obj} key={i} />
-  })
 
   return (
     <>
       <Hero text={title} />
-      {resultsHtml &&
       <div className="container">
-        <div className="row">
-          {resultsHtml}
+        <div className="row">          
+          {searchResults.length > 0 ? 
+            ( searchResults.map((obj, i) => <MovieCard movie={obj} key={i} />)) 
+            :
+            ( <p>No results :c</p> )
+          }
         </div>
-      </div>}
+      </div>
     </>
   );
 };
