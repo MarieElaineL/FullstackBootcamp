@@ -1,0 +1,5 @@
+In terminal with Pyhon mode activated (by typing python 3.13 in terminal)
+
+Type  "import random", and it will import temporairly (the duration of the terminal) the module to generate Randomness
+they you can declare a list of things to randomly pick
+=> random.choice(["rock", "paper", "scissors"])

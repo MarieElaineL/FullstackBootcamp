@@ -1,0 +1,11 @@
+How to create a simple HTTP python server locally
+
+
+terminal: python(version) -m http.server
+
+in my case
+
+python3.13 -m http.server
+It will create a port 8000
+
+cancel the server with ctrl c in terminal
