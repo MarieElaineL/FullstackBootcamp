@@ -1,4 +1,4 @@
-# None = empty variable, to be filled in later
+#=> None = empty variable, to be filled in later
 wallet = None
 if wallet is None:
     print("Haha poor 🫵.")

@@ -1,4 +1,4 @@
-# is basically like a JS object, or a JSON file
+#=> is basically like a JS object, or a JSON file
 # household = {
 #     "key" : "",
 #     "human_1" : "marie",
@@ -18,7 +18,7 @@ person = {
 }
 print("1-", person["name"])
 print("2-", person)
-person['hobby'] = "Arts and fiber arts" #Automaticall adds this to end of list
+person['hobby'] = "Arts and fiber arts" #=> Automaticall adds this to end of list
 print("3-", person)
 del person["deleteMe"]
 print("4-", person)

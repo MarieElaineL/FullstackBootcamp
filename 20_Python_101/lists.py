@@ -1,10 +1,10 @@
-# Array in JS
+#=> Array in JS
 lst = ["string", "1", "1.5", ["A new item", "A second new item"], "Marie"]
 print(lst)
 for item in lst:
     print("the item is :",item)
 
-# Things to test in terminal
+#=> Things to test in terminal
 # names = ["marie", "Puwu", "Awiwi"]
 # names
 # names.append("Fiwi")

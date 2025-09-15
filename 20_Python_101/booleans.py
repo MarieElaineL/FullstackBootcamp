@@ -1,4 +1,4 @@
-#classic True n False, 0 1
+#=> classic True n False, 0 1
 can_code = True
 
 if can_code == True:

@@ -17,7 +17,7 @@ if name.capitalize() == "Marie":
     print(welcome_message)
     bring_tea = "You Oolong tea is ready and at the perfect temperature"
 
-#elif is else if. I guess they got lazy?
+#=> elif is else if. I guess they got lazy?
 elif name.capitalize() == "Felix": 
     welcome_message = f"Welcome {name}, how was cards with the boys?"
     print(welcome_message)
@@ -30,4 +30,4 @@ else:
 
 print(bring_tea)
 
-# The comparison operator is the same like JS and pretty much any lang
+#=> The comparison operator is the same like JS and pretty much any lang
